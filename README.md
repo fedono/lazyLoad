@@ -1,12 +1,12 @@
 # 图片懒加载
 
-使用 [IntersectionObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)
+使用原生方法 [IntersectionObserver](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)
 
 通过检测所有的图片是否在当前窗口可见
 然后通过 `new IntersectionObserver(callback, options)` 来设置加载函数
 
 监听过程中检测元素的 `isIntersecting` 是否存在，如果存在，说明当前元素进入了检测范围了
-然后取消当前元素的监听，这时候就可以加载了图片了。
+然后取消当前元素的监听（因为加载了图片后就不需要监听了），这时候就可以加载了图片了。
 
 总体源码来自 [lazyload](https://github.com/tuupola/lazyload)
 
@@ -62,5 +62,5 @@ let partialVisible =
 这个方案参考 [react-visibility-sensor](https://github.com/joshwnj/react-visibility-sensor)
 
 ## 其他
-Q: 日常会问到那么初始设置的图片的占位大小如何设定
+Q: 日常会问到那么初始设置的图片的占位大小如何设定\
 A: 这个可以在图片上传的时候，获取到图片的大小，这样就可以在渲染页面的时候，设置占位符图片的大小
