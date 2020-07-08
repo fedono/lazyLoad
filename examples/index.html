@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            padding: 0;
+            margin: 0;
+        }
+        img {
+            width: 300px;
+            height: 600px;
+            display: block;
+        }
+    </style>
+    <script src="../lazyLoad.js"></script>
+</head>
+<body>
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/001.png" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/002.png" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/003.jpeg" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/004.jpg" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/005.png" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/006.png" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/007.png" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/008.jpg" alt="">
+    <img class="lazyLoad" src="imgs/thumbnail.png" data-src="imgs/009.jpeg" alt="">
+</body>
+<script>
+    let images = document.querySelectorAll('.lazyLoad');
+    new LazyLoad(images);
+</script>
+</html>
