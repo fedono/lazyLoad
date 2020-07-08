@@ -18,8 +18,6 @@
 ```js
 let elem = document.getElementById('elem');
 let rect = elem.getBoundingClientRect();
-let viewHeight = window.innerHeight || document.documentElement.clientHeight;
-let viewWidth = window.innerWidth || document.documentElement.clientWidth;
 ```
 需要考虑两种情况，一种是当前元素在window视口，一种是当前元素在父元素中（可能父元素中需要滑动才能显示子元素）
 ```js
